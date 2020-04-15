@@ -1,0 +1,5 @@
+<button class='btn' plain type='primary' bindgetuserinfo='handlegetUserinfo' open-type="getUserInfo">授权</button>
+
+
+<!-- <view>用户可以在分类页面跳转的对应商品列表，在商品详情页可以将商品添加到收藏或购物车，
+购物车页面有统计购买商品总数量及计算总价功能，在用户确认后跳转支付页面。</view> -->

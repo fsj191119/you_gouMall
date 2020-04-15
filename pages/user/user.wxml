@@ -1,0 +1,91 @@
+<!-- <view bindtap='gotologin'>登录</view> -->
+<view wx:if='{{userInfo.avatarUrl}}' class="userinfo_box">
+<view class="user_img" vx:if='{{userInfo.avatarUrl}}'>
+<image class="userimg_bg" src="{{userInfo.avatarUrl}}" mode=""/>
+<view class="userinfo">
+<image class="userimg_sm" src="{{userInfo.avatarUrl}}"/>
+<view class="user_name">{{userInfo.nickName}}</view>
+</view>
+</view>
+</view>
+<view wx:else class="userinfo_box"><button bindgetuserinfo="handleUser" open-type="getUserInfo">登录</button></view>
+
+<!-- 内容 -->
+<view class="user_content">
+<view class="user_main">
+<!-- 历史足迹 -->
+<view class="history">
+<navigator>
+<view class='his_num'>0</view>
+<view class="his_name">收藏的店铺</view>
+</navigator>
+
+<navigator url="/pages/collect/collect">
+<view class='his_num'>{{collectnum}}</view>
+<view class="his_name">收藏的商品</view>
+</navigator>
+
+<navigator>
+<view class='his_num'>0</view>
+<view class="his_name">关注的商品</view>
+</navigator>
+
+<navigator>
+<view class='his_num'>0</view>
+<view class="his_name">我的足迹</view>
+</navigator>
+</view>
+
+<!-- 我的订单 -->
+<view class="order">
+<view class="order_title">我的订单</view>
+<view class="order_item">
+<navigator url="/pages/order/order?type=1">
+<view class="iconfont icon-dingdan"></view>
+<view class='order_name'>全部订单</view>
+</navigator>
+
+<navigator url="/pages/order/order?type=2">
+<view class="iconfont icon-fukuan"></view>
+<view class='order_name'>待付款</view>
+</navigator>
+
+<navigator url="/pages/order/order?type=3">
+<view class="iconfont icon-shouhuodizhi"></view>
+<view class='order_name'>待收货</view>
+</navigator>
+
+<navigator>
+<view class="iconfont icon-fukuantongzhi"></view>
+<view class='order_name'>退款/退货</view>
+</navigator>
+</view>
+</view>
+
+
+<!-- 收货地址管理 -->
+<view class="address">
+收货地址管理
+</view>
+
+<!-- 客服反馈 -->
+<view class="collect">
+<view class="ke_fu it">
+<view>联系客服</view>
+<view class="tel it">400-618-4000</view>
+</view>
+<view class="fan_kui it" bindtap="gotoPage">意见反馈</view>
+<view class="about it">关于我们</view>
+</view>
+
+<!-- 推荐 -->
+<view class="address">
+把应用推荐给其他人
+</view>
+
+<!-- 内容结束 -->
+</view>
+</view>
+
+
+

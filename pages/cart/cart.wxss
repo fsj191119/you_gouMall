@@ -1,0 +1,144 @@
+page{
+  padding-bottom: 100rpx;
+}
+
+.address>.address_btn {
+  padding: 20rpx;
+}
+
+button {
+  width: 60%;
+}
+
+.userbox {
+  display: flex;
+  font-size: 30rpx;
+  padding: 20rpx;
+}
+
+.userinfo {
+  flex: 5;
+}
+
+.user_phone {
+  flex: 3;
+  text-align: right;
+}
+
+.title {
+  font-size: 36rpx;
+  padding: 20rpx;
+  color: var(--themeColor);
+  border-top: 2rpx solid currentColor;
+  border-bottom: 2rpx solid currentColor;
+}
+
+.item {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.cart_img {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_img>image{
+  width: 80%;
+}
+.cart_info {
+  flex: 4;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.cart_chk {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_name{
+  color: #666;
+   display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2; 
+}
+
+
+.price_warp{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12rpx;
+}
+.goods_price{
+  color: var(--themeColor);
+  font-size: 34rpx;
+}
+.numbox{
+  display: flex;
+}
+.edit{
+  width: 55rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid #ccc;
+}
+.num{
+    width: 55rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_tab{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  display: flex;
+  border-top: 2rpx solid #eee;
+}
+
+.all_chk{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all_price{
+  flex: 4;
+  text-align: right;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+}
+.order_pay{
+  flex: 3;
+  background: var(--themeColor);
+  color: white;
+  font-size: 32rpx;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.money{
+  color: var(--themeColor);
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.del{
+  padding-top: 7rpx;
+  color: #FF699C;
+  font-size: 28rpx;
+}

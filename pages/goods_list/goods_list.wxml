@@ -1,0 +1,44 @@
+<!-- 搜索框 -->
+<w-search_input/>
+<!-- 分类tabs -->
+<w-tabs bind:tabs_change='handle_change' titlelist="{{title}}">
+
+<block wx:if='{{title[0].isactive}}'>
+
+<view class="content" wx:for='{{goodsList}}' wx:key='index'>
+<view class="nav" bindtap="gotoPage" data-goods_id="{{item.goods_id}}">
+<view class="img">
+<image mode='widthFix' src="{{item.goods_big_logo?item.goods_big_logo:'https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'}}"></image>
+</view>
+<view class="info">
+<view class="goodsname">{{item.goods_name}}</view>
+<view class="price">￥{{item.goods_price}}</view>
+</view>
+</view>
+</view>
+<!-- ------------------------------- -->
+</block>
+
+<block wx:elif='{{title[1].isactive}}'><view class="content" wx:for='{{goodsList}}' wx:key='index'>
+<view class="nav" bindtap="gotoPage" data-goods_id="{{item.goods_id}}">
+<view class="img">
+<image mode='widthFix' src="{{item.goods_big_logo?item.goods_big_logo:'https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'}}"></image>
+</view>
+<view class="info">
+<view class="goodsname">{{item.goods_name}}</view>
+<view class="price">￥{{item.goods_price}}</view>
+</view>
+</view>
+</view></block>
+<block wx:elif='{{title[2].isactive}}'><view class="content" wx:for='{{goodsList}}' wx:key='index'>
+<view class="nav" bindtap="gotoPage" data-goods_id="{{item.goods_id}}">
+<view class="img">
+<image mode='widthFix' src="{{item.goods_big_logo?item.goods_big_logo:'https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'}}"></image>
+</view>
+<view class="info">
+<view class="goodsname">{{item.goods_name}}</view>
+<view class="price">￥{{item.goods_price}}</view>
+</view>
+</view>
+</view></block>
+</w-tabs>

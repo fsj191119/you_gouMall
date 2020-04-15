@@ -1,0 +1,50 @@
+/* page{
+  background: #edece8;
+} */
+.collect_tips{
+  margin: 30rpx;
+  border: 1rpx solid #ccc;
+  padding: 10rpx;
+  background: #fff;
+}
+.collect_content{
+  margin-top: 50rpx;
+}
+.collect_title{
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+}
+.isactive{
+  color: var(--themeColor);
+  border-color: var(--themeColor); 
+}
+
+/* ________________ */
+.nav{
+  display: flex;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+}
+.img{
+  flex: 2;
+}
+.img>image{
+  width: 80%;
+}
+.info{
+  flex: 3;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+.goodsname{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2; 
+}
+.price{
+  color: var(--themeColor);
+  font-size: 32rpx;
+}

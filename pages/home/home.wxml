@@ -1,0 +1,16 @@
+<!--pages/home/home.wxml-->
+<!-- 顶部搜索框 -->
+<w-search_input/>
+
+<!-- 轮播图 -->
+<w-swiper swiperdata='{{swiperlist}}'/>
+
+<!-- 分类导航 -->
+<view class="dsp">
+<w-navigator navigatordata="{{navigatorlist}}"/>
+</view>
+
+<!-- 楼层 -->
+<w-floor floordata="{{floorlist}}"/>
+
+

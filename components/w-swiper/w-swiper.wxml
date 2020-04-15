@@ -1,0 +1,8 @@
+
+  <swiper autoplay interval="2500" circular indicator-dots>
+  <block wx:for='{{swiperdata}}' wx:key='index'>
+      <swiper-item>
+      <image bindtap="gotopage" data-url="{{item.navigator_url}}" src='{{item.image_src}}' mode="widthFix" />
+      </swiper-item>
+    </block>
+  </swiper>

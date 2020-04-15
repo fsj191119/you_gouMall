@@ -1,0 +1,7 @@
+<view class="dsp">
+<block wx:for="{{navigatordata}}" wx:key="index">
+  <view class="box">
+    <image bindtap="gotopage" src="{{item.image_src}}" mode="widthFix"></image>
+  </view>
+</block>
+</view>

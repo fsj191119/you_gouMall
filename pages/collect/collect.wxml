@@ -1,0 +1,24 @@
+
+<w-tabs bind:tabs_change='handle_change' titlelist="{{title}}">
+
+<view class="collect_main">
+<view class="collect_title">
+<text class="collect_tips isactive">全部</text>
+<text class="collect_tips">正在热卖</text>
+<text class="collect_tips">即将上线</text>
+</view>
+<view class="collect_content">
+<view class="content" wx:for='{{collect}}' wx:key='index'>
+<view class="nav" bindtap="gotoPage" data-goods_id="{{item.goods_id}}">
+<view class="img">
+<image mode='widthFix' src="{{item.goods_big_logo?item.goods_big_logo:'https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'}}"></image>
+</view>
+<view class="info">
+<view class="goodsname">{{item.goods_name}}</view>
+<view class="price">￥{{item.goods_price}}</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+</w-tabs>

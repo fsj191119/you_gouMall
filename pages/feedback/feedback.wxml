@@ -1,0 +1,24 @@
+<w-tabs bind:tabs_change='handle_change' titlelist="{{title}}">
+<view class="main">
+<view class="select_title">问题的种类</view>
+<view class="tips">
+<text>功能建议</text>
+<text>购买遇到问题</text>
+<text>性能问题</text>
+<text>其他</text>
+</view>
+<view class="content">
+<textarea value="{{textValue}}" bindinput="handleTxtValue" placeholder="请描述一下您的问题"></textarea>
+<view class="fb_tool">
+<button bindtap="handleUpImg">+</button>
+<view bindtap="handleDel" data-index="{{index}}" class="up_img_item" wx:for='{{selectImg}}' wx:key='*this'><w-upimg src='{{item}}'></w-upimg></view>
+</view>
+</view>
+<view class="form_btn">
+<button type="warn" bindtap="handleSub">
+<icon type="success_no_circle" size="23" color="white"></icon>
+提交
+</button>
+</view>
+</view>
+</w-tabs>

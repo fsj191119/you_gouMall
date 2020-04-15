@@ -1,0 +1,99 @@
+page{
+  padding-bottom: 100rpx;
+}
+
+.goods_swiper>swiper{
+  /* height: 450rpx; */
+  height: 65vw;
+  text-align: center;
+}
+.goods_swiper>image{
+  width: 60%;
+}
+
+.info{
+  border-bottom: 8rpx solid #dedede;
+  border-top: 8rpx solid #dedede;
+  display: flex;
+  padding: 15rpx 0;
+}
+.goods_name{
+  flex: 5;
+  color: #000;
+  font-size: 30rpx;
+  padding: 0 15rpx;
+}
+.goods_name_hidden{
+   display: -webkit-box;
+   overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2; 
+}
+
+.price{
+  margin-top: 30rpx;
+  padding: 20rpx;
+  font-weight: 600;
+  color: var(--themeColor);
+}
+.collect{
+  border-left: 2rpx solid #bbb;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  color: var(--themeColor);
+  font-weight: 600;
+  padding: 20rpx;
+  font-size: 32rpx;
+}
+.btm_tool{
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  text-align: center;
+  border-top: 2rpx solid #ccc;
+}
+.tool_item{
+  flex: 1;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  padding-top: 12rpx;
+  padding-left: 8rpx;
+  position: relative;
+}
+.btn_cart,.btn_buy{
+flex: 2;
+text-align: center;
+line-height: 90rpx;
+background: #ffa500;
+font-weight: 500;
+color: #fff;
+font-size: 30rpx;
+padding: 0;
+}
+.btn_buy{
+  background: #eb4450;
+}
+.tool_item>.btn_kf{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: inline-block;
+}
+
+.collectis{
+ color:red;
+}

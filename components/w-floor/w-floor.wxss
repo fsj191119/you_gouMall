@@ -1,0 +1,23 @@
+.floor_title{
+  width: 100%;
+  padding: 10rpx 0;
+}
+
+.nav{
+  float: left;
+  width: 33.33%;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+}
+.nav > image{
+  width: 100%;
+}
+.nav>image:nth-last-child(-n+4){
+  height: 26.50711207vw;
+  border-left: 10rpx solid #fff;
+}
+.nav>image:nth-child(2),
+.nav>image:nth-child(3){
+  border-bottom: 10rpx solid #fff;
+}

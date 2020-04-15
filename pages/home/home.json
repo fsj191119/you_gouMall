@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "w-search_input":"/components/w-search_input/w-search_input",
+    "w-swiper":"/components/w-swiper/w-swiper",
+    "w-navigator":"/components/w-navigator/w-navigator",
+    "w-floor":"/components/w-floor/w-floor"
+  },
+  "navigationBarTitleText": "首页"
+} 

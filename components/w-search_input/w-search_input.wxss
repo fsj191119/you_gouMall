@@ -1,0 +1,19 @@
+.search_input{
+  height: 90rpx;
+  background: var(--themeColor);
+  padding: 10rpx;
+  text-align: center;
+}
+navigator{
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+  height: 70rpx;
+  color: #666;
+}
+.enter{
+  background: white;
+  color: #bbb;
+}

@@ -1,0 +1,11 @@
+<view class="goodslist">
+<view class="title">
+<view  bindtap="handleclick" data-index='{{index}}' class="titleitem {{item.isactive?'active':''}}" wx:for="{{titlelist}}" wx:key="id" >
+  <text>{{item.text}}</text>
+</view>
+</view>
+
+<view class="content">
+<slot/>
+</view>
+</view>

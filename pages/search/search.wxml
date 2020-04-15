@@ -1,0 +1,9 @@
+<view class='search'>
+<view class="header">
+<input value="{{inpValue}}" bindinput="handleInput" class="search_input" placeholder="请输入想要搜索的商品"></input>
+<view bindtap="handlecancel" class="cancle" hidden="{{!isshow}}">取消</view>
+</view>
+<view class="content">
+<view bindtap="gotoPage" data-goods_id='{{item.goods_id}}' class="item" wx:for='{{queryMessage}}' wx:key='goods_id'>{{item.goods_name}}</view>
+</view>
+</view>

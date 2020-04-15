@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "w-tabs": "/components/w-tabs/w-tabs",
+    "w-upimg":"/components/w-upimg/w-upimg"
+  },
+  "navigationBarTitleText": "意见反馈"
+}

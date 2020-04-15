@@ -1,0 +1,29 @@
+.title{
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+}
+.titleitem{
+ /* margin: 30rpx 0; */
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  flex: 1;
+  box-sizing: border-box;
+
+    height: 110rpx;
+  background: #fff;
+  line-height: 110rpx;
+  
+}
+text{
+    padding: 14rpx 0;
+}
+.active text{
+  color: var(--themeColor);
+  border-bottom: 5rpx solid var(--themeColor);
+  box-sizing: border-box;
+}
+.goodslist{
+width: 100%;
+}

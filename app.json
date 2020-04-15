@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/category/category",
+    "pages/goods_list/goods_list",
+    "pages/goods_detail/goods_detail",
+    "pages/cart/cart",
+    "pages/collect/collect",
+    "pages/order/order",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/feedback/feedback",
+    "pages/login/login",
+    "pages/auth/auth",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#890411",
+    "navigationBarTitleText": "小范商城",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#890411",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/assets/img/tabbar/shouye.png",
+        "selectedIconPath": "/assets/img/tabbar/shouye_active.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "/assets/img/tabbar/fenlei.png",
+        "selectedIconPath": "/assets/img/tabbar/fenlei_active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/assets/img/tabbar/gouwuche.png",
+        "selectedIconPath": "/assets/img/tabbar/gouwuche_active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "/assets/img/tabbar/gerenzhongxin.png",
+        "selectedIconPath": "/assets/img/tabbar/gerenzhongxin_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

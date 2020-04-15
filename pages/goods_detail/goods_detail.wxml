@@ -1,0 +1,56 @@
+<!-- 轮播图 -->
+<view class='goods_swiper'>
+<swiper interval="3000" autoplay circular indicator-dots>
+<block wx:for='{{goodsinfo.pics}}' wx:key='pics_id'>
+<swiper-item bindtap='handlebig_img' data-url='{{item.pics_mid}}'>
+<image mode="aspectFit" src="{{item.pics_mid}}"></image>
+</swiper-item>
+</block>
+</swiper>
+</view>
+
+<!-- 商品信息 -->
+<view class="price">￥{{goodsinfo.goods_price}}</view>
+<view class="info">
+<view bindtap="showtitle" class="goods_name {{isshow?'goods_name_hidden':''}}">{{goodsinfo.goods_name}}</view>
+<view class="collect" bindtap="handleCollect">
+<text class="iconfont icon-shoucang1 {{iscollect?'collectis':''}}"></text>
+<view>收藏</view>
+</view>
+</view>
+
+<!-- 图文详情 -->
+<view class="goods_detail">
+<view class="title">图文详情</view>
+<view class="content">
+<rich-text nodes='{{goodsinfo.goods_introduce}}'></rich-text></view>
+</view>
+
+<!-- 底部工具栏 -->
+<view class="btm_tool">
+<!-- 图标 -->
+<view class="tool_item">
+<view class="iconfont icon-10"></view>
+<view>联系客服</view>
+<button class="btn_kf" size="mini" open-type="contact"></button>
+</view>
+<!-- 图标 -->
+<view class="tool_item">
+<view class="iconfont icon-fenxiang1"></view>
+<view>分享</view>
+<button class="btn_kf" size="mini" open-type="share"></button>
+</view>
+<!-- 图标 -->
+<view bindtap="gotoCart" class="tool_item">
+<view class="iconfont icon-gouwuche"></view>
+<view>购物车</view>
+</view>
+<!-- 按钮 -->
+<view class="tool_item btn_cart" bindtap="handleCartAdd">
+加入购物车
+</view>
+<!-- 按钮 -->
+<view class="tool_item btn_buy">
+立即购买
+</view>
+</view>
