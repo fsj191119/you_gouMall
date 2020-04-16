@@ -24,6 +24,29 @@ Page({
     })
   },
 
+  //立即购买
+  nowbuy() {
+    //获取缓存中的购物车 数组
+    let cart = wx.getStorageSync("cart") || []
+    //判断商品对象 是否存在于购物车数组中
+    let index = cart.findIndex(v => v.goods_id === this.Goodsinfo.goods_id)
+    if (index === -1) {
+      //不存在 第一次添加
+      this.Goodsinfo.num = 1
+      this.Goodsinfo.check = true
+      cart.push(this.Goodsinfo)
+    } else {
+      //已经存在购物车数据
+      // cart[index].num++
+    }
+    //购物车重新添加到缓存中
+    wx.setStorageSync('cart', cart);
+
+    wx.navigateTo({
+      url: '/pages/pay/pay',
+    })
+  },
+
 
   //页面加载
   onLoad: function (options) {

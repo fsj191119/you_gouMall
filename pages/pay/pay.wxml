@@ -2,7 +2,7 @@
 <view class="address">
   <!-- 没有收货地址时 -->
   <view class="address_btn" wx:if="{{!address.userName}}">
-    <button type="primary" plain>获取收货地址</button>
+    <button bindtap="handleAddress" type="primary" plain>获取收货地址</button>
   </view>
   <!-- 有收或地址时 -->
   <view class="userbox" wx:else>

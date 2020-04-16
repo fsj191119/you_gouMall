@@ -10,7 +10,6 @@
     "pages/search/search",
     "pages/user/user",
     "pages/feedback/feedback",
-    "pages/login/login",
     "pages/auth/auth",
     "pages/pay/pay"
   ],

@@ -50,7 +50,7 @@
 加入购物车
 </view>
 <!-- 按钮 -->
-<view class="tool_item btn_buy">
+<view bindtap="nowbuy" class="tool_item btn_buy">
 立即购买
 </view>
 </view>

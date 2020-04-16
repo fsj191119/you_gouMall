@@ -1,7 +1,11 @@
 import {
   getPay
 } from '../../request/pay.js'
-
+import {
+  getSetting,
+  chooseAddress,
+  openSetting
+} from '../../utils/promiseWx.js'
 Page({
 
   data: {
@@ -43,11 +47,19 @@ Page({
 
   //支付
   handlePay() {
+    let address=wx.getStorageSync('address')
+    if (!address.userName) {
+      wx.showToast({
+        title: '您还没选择收货地址',
+        icon: "none"
+      })
+      return
+    }
     //判断缓存中有没有token
     const token = wx.getStorageSync('token')
     if (!token) {
       wx.navigateTo({
-        url: '/pages/auth/auth',
+        url: 'pages/auth/auth',
       })
       return
     }
@@ -91,6 +103,58 @@ Page({
       
     })
   },
+  //点击获取收货地址
+  handleAddress() {
+    //获取权限状态
+    getSetting().then(res => {
+      const scopeAddress = res.authSetting["scope.address"]
+      console.log(scopeAddress)
+      if (scopeAddress === false) {
+        //用户以前拒绝过授予权限 先诱导用户打开授权页面（拒绝过）
+        openSetting()
+      }
+      //获取收货地址
+      chooseAddress().then(address => {
+        // console.log(address)
+        //存入到缓存中
+        address.all = address.provinceName + address.cityName + address.countyName + address.detailInfo//详细地址
+        wx.setStorageSync('address', address)
+      })
+    })
+  },
+
+  onUnload: function () {
+    // 页面销毁时执行
+    console.log('---')
+    //清空展示数据
+    let cart=[]
+    this._setCart(cart)
+  },
+  //设置购物车状态 同时重新计算底部tabbar栏里的数据
+  _setCart(cart) {
+    //重新计算全选
+    let allcheck = true
+    //总价格 总数量
+    let allprice = 0
+    let allnum = 0
+    cart.forEach(v => {
+      if (v.check) {
+        allprice += v.num * v.goods_price
+        allnum += v.num
+      } else { allcheck = false }//没有选中
+    })
+    //判断数组是否为空
+    allcheck = cart.length != 0 ? allcheck : false
+    this.setData({
+      cart,
+      allprice,
+      allnum,
+      allcheck
+    })
+
+    wx.setStorageSync('cart', cart)
+  },
+
 
   //      根据当前时间和随机数生成流水号
   randomNumber() {
